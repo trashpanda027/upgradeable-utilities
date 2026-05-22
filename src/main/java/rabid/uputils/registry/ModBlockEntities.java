@@ -43,6 +43,12 @@ public final class ModBlockEntities {
 			ModBlocks.NETHERITE_FURNACE
 	);
 
+	public static final BlockEntityType<CopperBlastFurnaceBlockEntity> COPPER_BLAST_FURNACE = register(
+			"copper_blast_furnace",
+			CopperBlastFurnaceBlockEntity::new,
+			ModBlocks.COPPER_BLAST_FURNACE
+	);
+
 	public static <T extends BlockEntity> BlockEntityType<T> register(
 		String name,
 		FabricBlockEntityTypeBuilder.Factory<T> factory,
