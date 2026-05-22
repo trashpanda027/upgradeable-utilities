@@ -53,6 +53,13 @@ public final class ModBlocks {
 			new Item.Properties()
 	);
 
+	public static final Block COPPER_BLAST_FURNACE = registerWithItem(
+			"copper_blast_furnace",
+			CopperBlastFurnaceBlock::new,
+			BlockBehaviour.Properties.ofFullCopy(Blocks.BLAST_FURNACE),
+			new Item.Properties()
+	);
+
 	public static Block register(String name, Block block) {
 		return Registry.register(BuiltInRegistries.BLOCK, id(name), block);
 	}
