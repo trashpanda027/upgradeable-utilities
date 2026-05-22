@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "upgradeable-utilities:gold_furnace",
+    "D": "minecraft:diamond"
+  },
+  "pattern": [
+    " D ",
+    "DCD",
+    " D "
+  ],
+  "result": {
+    "id": "upgradeable-utilities:diamond_furnace"
+  }
+}

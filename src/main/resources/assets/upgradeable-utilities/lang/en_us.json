@@ -1,0 +1,25 @@
+{
+  "itemGroup.upgradeable_utilities": "Upgradeable Utilities",
+
+  "item.upgradeable-utilities.example_item": "Example Item",
+
+  "block.upgradeable-utilities.copper_furnace": "Copper Furnace",
+  "item.upgradeable-utilities.copper_furnace": "Copper Furnace",
+  "container.upgradeable-utilities.copper_furnace": "Copper Furnace",
+
+  "block.upgradeable-utilities.iron_furnace": "Iron Furnace",
+  "item.upgradeable-utilities.iron_furnace": "Iron Furnace",
+  "container.upgradeable-utilities.iron_furnace": "Iron Furnace",
+
+  "block.upgradeable-utilities.gold_furnace": "Gold Furnace",
+  "item.upgradeable-utilities.gold_furnace": "Gold Furnace",
+  "container.upgradeable-utilities.gold_furnace": "Gold Furnace",
+
+  "block.upgradeable-utilities.diamond_furnace": "Diamond Furnace",
+  "item.upgradeable-utilities.diamond_furnace": "Diamond Furnace",
+  "container.upgradeable-utilities.diamond_furnace": "Diamond Furnace",
+
+  "block.upgradeable-utilities.netherite_furnace": "Netherite Furnace",
+  "item.upgradeable-utilities.netherite_furnace": "Netherite Furnace",
+  "container.upgradeable-utilities.netherite_furnace": "Netherite Furnace"
+}

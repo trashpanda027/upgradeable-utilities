@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "top": "upgradeable-utilities:block/copperfurnace/copper_furnace_top",
+    "front": "upgradeable-utilities:block/copperfurnace/copper_furnace_front",
+    "side": "upgradeable-utilities:block/copperfurnace/copper_furnace_side",
+    "bottom": "upgradeable-utilities:block/copperfurnace/copper_furnace_top"
+  }
+}

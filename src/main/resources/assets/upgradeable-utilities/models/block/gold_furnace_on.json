@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "top": "upgradeable-utilities:block/goldfurnace/gold_furnace_top",
+    "front": "upgradeable-utilities:block/goldfurnace/gold_furnace_front_on",
+    "side": "upgradeable-utilities:block/goldfurnace/gold_furnace_side",
+    "bottom": "upgradeable-utilities:block/goldfurnace/gold_furnace_top"
+  }
+}
