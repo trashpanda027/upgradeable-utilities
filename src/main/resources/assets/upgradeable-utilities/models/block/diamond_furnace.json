@@ -1,9 +1,0 @@
-{
-  "parent": "minecraft:block/orientable_with_bottom",
-  "textures": {
-    "top": "upgradeable-utilities:block/diamondfurnace/diamond_furnace_top",
-    "front": "upgradeable-utilities:block/diamondfurnace/diamond_furnace_front",
-    "side": "upgradeable-utilities:block/diamondfurnace/diamond_furnace_side",
-    "bottom": "upgradeable-utilities:block/diamondfurnace/diamond_furnace_top"
-  }
-}

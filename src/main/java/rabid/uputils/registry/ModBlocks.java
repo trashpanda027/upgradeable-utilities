@@ -18,47 +18,35 @@ import java.util.function.Function;
 public final class ModBlocks {
 	private ModBlocks() {}
 
-	public static final Block COPPER_FURNACE = registerWithItem(
-		"copper_furnace",
-		CopperFurnaceBlock::new,
-		BlockBehaviour.Properties.ofFullCopy(Blocks.FURNACE),
-		new Item.Properties()
-	);
+	public static final Block COPPER_FURNACE = registerFurnace("copper_furnace", CopperFurnaceBlock::new);
+	public static final Block IRON_FURNACE = registerFurnace("iron_furnace", IronFurnaceBlock::new);
+	public static final Block GOLD_FURNACE = registerFurnace("gold_furnace", GoldFurnaceBlock::new);
+	public static final Block DIAMOND_FURNACE = registerFurnace("diamond_furnace", DiamondFurnaceBlock::new);
+	public static final Block NETHERITE_FURNACE = registerFurnace("netherite_furnace", NetheriteFurnaceBlock::new);
 
-	public static final Block IRON_FURNACE = registerWithItem(
-			"iron_furnace",
-			IronFurnaceBlock::new,
+	public static final Block COPPER_BLAST_FURNACE = registerBlastFurnace("copper_blast_furnace", CopperBlastFurnaceBlock::new);
+	public static final Block IRON_BLAST_FURNACE = registerBlastFurnace("iron_blast_furnace", IronBlastFurnaceBlock::new);
+	public static final Block GOLD_BLAST_FURNACE = registerBlastFurnace("gold_blast_furnace", GoldBlastFurnaceBlock::new);
+	public static final Block DIAMOND_BLAST_FURNACE = registerBlastFurnace("diamond_blast_furnace", DiamondBlastFurnaceBlock::new);
+	public static final Block NETHERITE_BLAST_FURNACE = registerBlastFurnace("netherite_blast_furnace", NetheriteBlastFurnaceBlock::new);
+
+	private static Block registerFurnace(String id, Function<BlockBehaviour.Properties, Block> blockFactory) {
+		return registerWithItem(
+			id,
+			blockFactory,
 			BlockBehaviour.Properties.ofFullCopy(Blocks.FURNACE),
 			new Item.Properties()
-	);
+		);
+	}
 
-	public static final Block GOLD_FURNACE = registerWithItem(
-			"gold_furnace",
-			GoldFurnaceBlock::new,
-			BlockBehaviour.Properties.ofFullCopy(Blocks.FURNACE),
-			new Item.Properties()
-	);
-
-	public static final Block DIAMOND_FURNACE = registerWithItem(
-			"diamond_furnace",
-			DiamondFurnaceBlock::new,
-			BlockBehaviour.Properties.ofFullCopy(Blocks.FURNACE),
-			new Item.Properties()
-	);
-
-	public static final Block NETHERITE_FURNACE = registerWithItem(
-			"netherite_furnace",
-			NetheriteFurnaceBlock::new,
-			BlockBehaviour.Properties.ofFullCopy(Blocks.FURNACE),
-			new Item.Properties()
-	);
-
-	public static final Block COPPER_BLAST_FURNACE = registerWithItem(
-			"copper_blast_furnace",
-			CopperBlastFurnaceBlock::new,
+	private static Block registerBlastFurnace(String id, Function<BlockBehaviour.Properties, Block> blockFactory) {
+		return registerWithItem(
+			id,
+			blockFactory,
 			BlockBehaviour.Properties.ofFullCopy(Blocks.BLAST_FURNACE),
 			new Item.Properties()
-	);
+		);
+	}
 
 	public static Block register(String name, Block block) {
 		return Registry.register(BuiltInRegistries.BLOCK, id(name), block);
