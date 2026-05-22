@@ -122,5 +122,17 @@ public final class ModRecipeProvider extends AbstractModRecipeProvider {
 				ModBlocks.DIAMOND_FURNACE,
 				"netherite_furnace_upgrade"
 		);
+
+		// Netherite Furnace Recipe
+		surroundedCenter(
+				recipeProvider,
+				itemLookup,
+				output,
+				RecipeCategory.DECORATIONS,
+				ModBlocks.COPPER_BLAST_FURNACE,
+				Items.COPPER_INGOT,
+				Blocks.FURNACE,
+				"copper_blast_furnace_base"
+		);
 	}
 }
