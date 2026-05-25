@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "minecraft:blast_furnace",
+    "S": "minecraft:netherite_ingot"
+  },
+  "pattern": [
+    "SSS",
+    "SCS",
+    "SSS"
+  ],
+  "result": {
+    "id": "upgradeable-utilities:netherite_blast_furnace"
+  }
+}

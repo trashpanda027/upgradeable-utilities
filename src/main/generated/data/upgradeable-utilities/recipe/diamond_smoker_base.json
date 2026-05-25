@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "minecraft:smoker",
+    "S": "minecraft:diamond"
+  },
+  "pattern": [
+    "SSS",
+    "SCS",
+    "SSS"
+  ],
+  "result": {
+    "id": "upgradeable-utilities:diamond_smoker"
+  }
+}

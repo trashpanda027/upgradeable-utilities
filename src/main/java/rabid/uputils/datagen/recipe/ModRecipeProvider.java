@@ -135,6 +135,66 @@ public final class ModRecipeProvider extends AbstractModRecipeProvider {
 				"copper_blast_furnace_base"
 		);
 
+		// Copper Smoker Recipe
+		surroundedCenter(
+				recipeProvider,
+				itemLookup,
+				output,
+				RecipeCategory.DECORATIONS,
+				ModBlocks.COPPER_SMOKER,
+				Items.COPPER_INGOT,
+				Blocks.SMOKER,
+				"copper_smoker_base"
+		);
+
+		// Iron Smoker Recipe
+		surroundedCenter(
+				recipeProvider,
+				itemLookup,
+				output,
+				RecipeCategory.DECORATIONS,
+				ModBlocks.IRON_SMOKER,
+				Items.IRON_INGOT,
+				Blocks.SMOKER,
+				"iron_smoker_base"
+		);
+
+		// Gold Smoker Recipe
+		surroundedCenter(
+				recipeProvider,
+				itemLookup,
+				output,
+				RecipeCategory.DECORATIONS,
+				ModBlocks.GOLD_SMOKER,
+				Items.GOLD_INGOT,
+				Blocks.SMOKER,
+				"gold_smoker_base"
+		);
+
+		// Diamond Smoker Recipe
+		surroundedCenter(
+				recipeProvider,
+				itemLookup,
+				output,
+				RecipeCategory.DECORATIONS,
+				ModBlocks.DIAMOND_SMOKER,
+				Items.DIAMOND,
+				Blocks.SMOKER,
+				"diamond_smoker_base"
+		);
+
+		// Netherite Smoker Recipe
+		surroundedCenter(
+				recipeProvider,
+				itemLookup,
+				output,
+				RecipeCategory.DECORATIONS,
+				ModBlocks.NETHERITE_SMOKER,
+				Items.NETHERITE_INGOT,
+				Blocks.SMOKER,
+				"netherite_smoker_base"
+		);
+
 		// Iron Blast Furnace Recipe
 		surroundedCenter(
 				recipeProvider,
@@ -225,6 +285,66 @@ public final class ModRecipeProvider extends AbstractModRecipeProvider {
 				Items.NETHERITE_INGOT,
 				ModBlocks.DIAMOND_BLAST_FURNACE,
 				"netherite_blast_furnace_upgrade"
+		);
+
+		// Iron Smoker Upgrade Recipe
+		diamondShapeCenter(
+				recipeProvider,
+				itemLookup,
+				output,
+				RecipeCategory.DECORATIONS,
+				ModBlocks.IRON_SMOKER,
+				Items.IRON_INGOT,
+				ModBlocks.COPPER_SMOKER,
+				"iron_smoker_upgrade"
+		);
+
+		// Gold Smoker Upgrade Recipe
+		diamondShapeCenter(
+				recipeProvider,
+				itemLookup,
+				output,
+				RecipeCategory.DECORATIONS,
+				ModBlocks.GOLD_SMOKER,
+				Items.GOLD_INGOT,
+				ModBlocks.IRON_SMOKER,
+				"gold_smoker_upgrade"
+		);
+
+		// Diamond Smoker Upgrade Recipe
+		diamondShapeCenter(
+				recipeProvider,
+				itemLookup,
+				output,
+				RecipeCategory.DECORATIONS,
+				ModBlocks.DIAMOND_SMOKER,
+				Items.DIAMOND,
+				ModBlocks.GOLD_SMOKER,
+				"diamond_smoker_upgrade"
+		);
+
+		// Netherite Smoker Upgrade Recipe
+		diamondShapeCenter(
+				recipeProvider,
+				itemLookup,
+				output,
+				RecipeCategory.DECORATIONS,
+				ModBlocks.NETHERITE_SMOKER,
+				Items.NETHERITE_INGOT,
+				ModBlocks.DIAMOND_SMOKER,
+				"netherite_smoker_upgrade"
+		);
+
+		// Copper Anvil Recipe
+		surroundedCenter(
+				recipeProvider,
+				itemLookup,
+				output,
+				RecipeCategory.DECORATIONS,
+				ModBlocks.COPPER_ANVIL,
+				Items.COPPER_INGOT,
+				Blocks.ANVIL,
+				"copper_anvil_base"
 		);
 	}
 }

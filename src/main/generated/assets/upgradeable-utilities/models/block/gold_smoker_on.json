@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "upgradeable-utilities:block/goldsmoker/gold_smoker_top",
+    "front": "upgradeable-utilities:block/goldsmoker/gold_smoker_front_on",
+    "side": "upgradeable-utilities:block/goldsmoker/gold_smoker_side",
+    "top": "upgradeable-utilities:block/goldsmoker/gold_smoker_top"
+  }
+}

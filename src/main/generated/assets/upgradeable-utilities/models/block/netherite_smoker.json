@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "upgradeable-utilities:block/netheritesmoker/netherite_smoker_top",
+    "front": "upgradeable-utilities:block/netheritesmoker/netherite_smoker_front",
+    "side": "upgradeable-utilities:block/netheritesmoker/netherite_smoker_side",
+    "top": "upgradeable-utilities:block/netheritesmoker/netherite_smoker_top"
+  }
+}

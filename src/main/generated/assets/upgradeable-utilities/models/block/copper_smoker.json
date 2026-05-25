@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "upgradeable-utilities:block/coppersmoker/copper_smoker_top",
+    "front": "upgradeable-utilities:block/coppersmoker/copper_smoker_front",
+    "side": "upgradeable-utilities:block/coppersmoker/copper_smoker_side",
+    "top": "upgradeable-utilities:block/coppersmoker/copper_smoker_top"
+  }
+}

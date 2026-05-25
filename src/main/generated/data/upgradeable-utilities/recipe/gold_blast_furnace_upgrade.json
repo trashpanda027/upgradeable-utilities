@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "upgradeable-utilities:iron_blast_furnace",
+    "D": "minecraft:gold_ingot"
+  },
+  "pattern": [
+    " D ",
+    "DCD",
+    " D "
+  ],
+  "result": {
+    "id": "upgradeable-utilities:gold_blast_furnace"
+  }
+}

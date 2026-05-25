@@ -2,6 +2,7 @@ package rabid.uputils;
 
 import net.fabricmc.api.ModInitializer;
 import rabid.uputils.registry.ModBlockEntities;
+import rabid.uputils.registry.ModAnvilDurability;
 import rabid.uputils.registry.ModBlocks;
 import rabid.uputils.registry.ModCreativeTabs;
 import rabid.uputils.registry.ModItems;
@@ -22,6 +23,7 @@ public class UpgradeableUtilities implements ModInitializer {
 		ModBlocks.initialize();
 		ModItems.initialize();
 		ModBlockEntities.initialize();
+		ModAnvilDurability.initialize();
 		ModCreativeTabs.initialize();
 
 		LOGGER.info("Upgradeable Utilities initialized.");

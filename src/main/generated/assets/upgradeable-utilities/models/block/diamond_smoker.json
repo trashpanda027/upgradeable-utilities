@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "upgradeable-utilities:block/diamondsmoker/diamond_smoker_top",
+    "front": "upgradeable-utilities:block/diamondsmoker/diamond_smoker_front",
+    "side": "upgradeable-utilities:block/diamondsmoker/diamond_smoker_side",
+    "top": "upgradeable-utilities:block/diamondsmoker/diamond_smoker_top"
+  }
+}
