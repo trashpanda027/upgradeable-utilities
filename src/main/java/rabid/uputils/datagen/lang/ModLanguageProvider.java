@@ -32,8 +32,7 @@ public final class ModLanguageProvider extends FabricLanguageProvider {
 			new TranslationEntry("iron_smoker", "Iron Smoker", true),
 			new TranslationEntry("gold_smoker", "Gold Smoker", true),
 			new TranslationEntry("diamond_smoker", "Diamond Smoker", true),
-			new TranslationEntry("netherite_smoker", "Netherite Smoker", true),
-			new TranslationEntry("copper_anvil", "Copper Anvil", false)
+			new TranslationEntry("netherite_smoker", "Netherite Smoker", true)
 		);
 
 		for (TranslationEntry entry : entries) {

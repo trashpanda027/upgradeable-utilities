@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/template_anvil",
-  "textures": {
-    "body": "upgradeable-utilities:block/copperanvil/anvil",
-    "particle": "upgradeable-utilities:block/copperanvil/anvil",
-    "top": "upgradeable-utilities:block/copperanvil/damaged_anvil_top"
-  }
-}

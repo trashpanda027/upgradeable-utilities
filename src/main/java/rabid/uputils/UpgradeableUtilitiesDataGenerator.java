@@ -3,8 +3,10 @@ package rabid.uputils;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import rabid.uputils.datagen.lang.ModLanguageProvider;
+import rabid.uputils.datagen.loot.ModBlockLootProvider;
 import rabid.uputils.datagen.model.ModAssetModelProvider;
 import rabid.uputils.datagen.recipe.ModRecipeProvider;
+import rabid.uputils.datagen.tag.ModBlockTagProvider;
 
 public class UpgradeableUtilitiesDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -13,5 +15,7 @@ public class UpgradeableUtilitiesDataGenerator implements DataGeneratorEntrypoin
 		pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(ModAssetModelProvider::new);
 		pack.addProvider(ModLanguageProvider::new);
+		pack.addProvider(ModBlockLootProvider::new);
+		pack.addProvider(ModBlockTagProvider::new);
 	}
 }

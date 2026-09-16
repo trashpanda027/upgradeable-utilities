@@ -334,17 +334,5 @@ public final class ModRecipeProvider extends AbstractModRecipeProvider {
 				ModBlocks.DIAMOND_SMOKER,
 				"netherite_smoker_upgrade"
 		);
-
-		// Copper Anvil Recipe
-		surroundedCenter(
-				recipeProvider,
-				itemLookup,
-				output,
-				RecipeCategory.DECORATIONS,
-				ModBlocks.COPPER_ANVIL,
-				Items.COPPER_INGOT,
-				Blocks.ANVIL,
-				"copper_anvil_base"
-		);
 	}
 }

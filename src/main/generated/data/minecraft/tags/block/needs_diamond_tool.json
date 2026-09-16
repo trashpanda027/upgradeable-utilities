@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "upgradeable-utilities:netherite_furnace",
+    "upgradeable-utilities:netherite_blast_furnace",
+    "upgradeable-utilities:netherite_smoker"
+  ]
+}

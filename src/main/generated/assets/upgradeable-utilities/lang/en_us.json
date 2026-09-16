@@ -1,5 +1,4 @@
 {
-  "block.upgradeable-utilities.copper_anvil": "Copper Anvil",
   "block.upgradeable-utilities.copper_blast_furnace": "Copper Blast Furnace",
   "block.upgradeable-utilities.copper_furnace": "Copper Furnace",
   "block.upgradeable-utilities.copper_smoker": "Copper Smoker",
@@ -30,7 +29,6 @@
   "container.upgradeable-utilities.netherite_blast_furnace": "Netherite Blast Furnace",
   "container.upgradeable-utilities.netherite_furnace": "Netherite Furnace",
   "container.upgradeable-utilities.netherite_smoker": "Netherite Smoker",
-  "item.upgradeable-utilities.copper_anvil": "Copper Anvil",
   "item.upgradeable-utilities.copper_blast_furnace": "Copper Blast Furnace",
   "item.upgradeable-utilities.copper_furnace": "Copper Furnace",
   "item.upgradeable-utilities.copper_smoker": "Copper Smoker",

@@ -40,8 +40,6 @@ public final class ModBlocks {
 	public static final Block GOLD_SMOKER = registerSmoker("gold_smoker", GoldSmokerBlock::new);
 	public static final Block DIAMOND_SMOKER = registerSmoker("diamond_smoker", DiamondSmokerBlock::new);
 	public static final Block NETHERITE_SMOKER = registerSmoker("netherite_smoker", NetheriteSmokerBlock::new);
-	// Anvils
-	public static final Block COPPER_ANVIL = registerAnvil("copper_anvil", CopperAnvilBlock::new);
 
 	private static Block registerFurnace(String id, Function<BlockBehaviour.Properties, Block> blockFactory) {
 		return registerWithItem(
@@ -66,15 +64,6 @@ public final class ModBlocks {
 			id,
 			blockFactory,
 			BlockBehaviour.Properties.ofFullCopy(Blocks.SMOKER),
-			new Item.Properties()
-		);
-	}
-
-	private static Block registerAnvil(String id, Function<BlockBehaviour.Properties, Block> blockFactory) {
-		return registerWithItem(
-			id,
-			blockFactory,
-			BlockBehaviour.Properties.ofFullCopy(Blocks.ANVIL),
 			new Item.Properties()
 		);
 	}

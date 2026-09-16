@@ -3,10 +3,7 @@
 	"package": "rabid.uputils.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
-		"AbstractFurnaceBlockEntityMixin",
-		"AnvilMenuMixin",
-		"AnvilMenuAccessor",
-		"ItemCombinerMenuAccessor"
+		"AbstractFurnaceBlockEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

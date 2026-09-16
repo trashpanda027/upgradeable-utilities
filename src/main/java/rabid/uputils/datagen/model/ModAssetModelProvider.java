@@ -39,9 +39,6 @@ public final class ModAssetModelProvider implements DataProvider {
 		assets.add(new AssetDefinition("gold_smoker", "goldsmoker", 3));
 		assets.add(new AssetDefinition("diamond_smoker", "diamondsmoker", 3));
 		assets.add(new AssetDefinition("netherite_smoker", "netheritesmoker", 3));
-
-		// Anvils
-		assets.add(AssetDefinition.anvil("copper_anvil", "copperanvil"));
 	}
 	@Override
 	public CompletableFuture<?> run(CachedOutput cachedOutput) {
@@ -49,24 +46,16 @@ public final class ModAssetModelProvider implements DataProvider {
 
 		for (AssetDefinition asset : assets) {
 			Identifier id = Identifier.fromNamespaceAndPath(UpgradeableUtilities.MOD_ID, asset.blockId());
-			if (asset.kind() == AssetKind.ANVIL) {
-				saves.add(DataProvider.saveStable(cachedOutput, createAnvilBlockstateJson(id), blockstatePath(asset.blockId())));
-				saves.add(DataProvider.saveStable(cachedOutput, createAnvilModelJson(asset.textureFolder(), "anvil_top"), blockModelPath(asset.blockId())));
-				saves.add(DataProvider.saveStable(cachedOutput, createAnvilModelJson(asset.textureFolder(), "chipped_anvil_top"), blockModelPath("chipped_" + asset.blockId())));
-				saves.add(DataProvider.saveStable(cachedOutput, createAnvilModelJson(asset.textureFolder(), "damaged_anvil_top"), blockModelPath("damaged_" + asset.blockId())));
-				saves.add(DataProvider.saveStable(cachedOutput, createItemDefinitionJson(id), itemDefinitionPath(asset.blockId())));
-			} else {
-				saves.add(DataProvider.saveStable(cachedOutput, createBlockstateJson(id), blockstatePath(asset.blockId())));
-				saves.add(DataProvider.saveStable(cachedOutput, createBlockModelJson(asset.textureFolder(), asset.blockId(), false), blockModelPath(asset.blockId())));
-				saves.add(DataProvider.saveStable(cachedOutput, createBlockModelJson(asset.textureFolder(), asset.blockId(), true), blockModelPath(asset.blockId() + "_on")));
-				saves.add(DataProvider.saveStable(cachedOutput, createItemDefinitionJson(id), itemDefinitionPath(asset.blockId())));
-				if (asset.litAnimationFrames() > 0) {
-					saves.add(DataProvider.saveStable(
-						cachedOutput,
-						createFrontOnAnimationMetaJson(asset.litAnimationFrames()),
-						textureAnimationMetaPath(asset.textureFolder(), asset.blockId())
-					));
-				}
+			saves.add(DataProvider.saveStable(cachedOutput, createBlockstateJson(id), blockstatePath(asset.blockId())));
+			saves.add(DataProvider.saveStable(cachedOutput, createBlockModelJson(asset.textureFolder(), asset.blockId(), false), blockModelPath(asset.blockId())));
+			saves.add(DataProvider.saveStable(cachedOutput, createBlockModelJson(asset.textureFolder(), asset.blockId(), true), blockModelPath(asset.blockId() + "_on")));
+			saves.add(DataProvider.saveStable(cachedOutput, createItemDefinitionJson(id), itemDefinitionPath(asset.blockId())));
+			if (asset.litAnimationFrames() > 0) {
+				saves.add(DataProvider.saveStable(
+					cachedOutput,
+					createFrontOnAnimationMetaJson(asset.litAnimationFrames()),
+					textureAnimationMetaPath(asset.textureFolder(), asset.blockId())
+				));
 			}
 		}
 
@@ -133,24 +122,6 @@ public final class ModAssetModelProvider implements DataProvider {
 		return root;
 	}
 
-	private JsonObject createAnvilBlockstateJson(Identifier id) {
-		JsonObject root = new JsonObject();
-		JsonObject variants = new JsonObject();
-		String undamagedModel = id.withPath(path -> "block/" + path).toString();
-		addAnvilFacingVariants(variants, undamagedModel);
-
-		root.add("variants", variants);
-		return root;
-	}
-
-	private void addAnvilFacingVariants(JsonObject variants, String modelPath) {
-		// Match vanilla anvil-facing rotations.
-		variants.add("facing=south", modelVariant(modelPath, 0));
-		variants.add("facing=west", modelVariant(modelPath, 90));
-		variants.add("facing=north", modelVariant(modelPath, 180));
-		variants.add("facing=east", modelVariant(modelPath, 270));
-	}
-
 	private JsonObject modelVariant(String modelPath, int yRotation) {
 		JsonObject variant = new JsonObject();
 		variant.addProperty("model", modelPath);
@@ -170,19 +141,6 @@ public final class ModAssetModelProvider implements DataProvider {
 		textures.addProperty("front", texturePath(textureFolder, texturePrefix + (lit ? "_front_on" : "_front")));
 		// Fallback: use top as bottom when a dedicated bottom texture is not provided.
 		textures.addProperty("bottom", texturePath(textureFolder, texturePrefix + "_top"));
-
-		root.add("textures", textures);
-		return root;
-	}
-
-	private JsonObject createAnvilModelJson(String textureFolder, String topTextureName) {
-		JsonObject root = new JsonObject();
-		root.addProperty("parent", "minecraft:block/template_anvil");
-
-		JsonObject textures = new JsonObject();
-		textures.addProperty("top", texturePath(textureFolder, topTextureName));
-		textures.addProperty("body", texturePath(textureFolder, "anvil"));
-		textures.addProperty("particle", texturePath(textureFolder, "anvil"));
 
 		root.add("textures", textures);
 		return root;
@@ -215,18 +173,5 @@ public final class ModAssetModelProvider implements DataProvider {
 		return UpgradeableUtilities.MOD_ID + ":block/" + textureFolder + "/" + textureName;
 	}
 
-	private enum AssetKind {
-		FURNACE_LIKE,
-		ANVIL
-	}
-
-	private record AssetDefinition(String blockId, String textureFolder, int litAnimationFrames, AssetKind kind) {
-		private AssetDefinition(String blockId, String textureFolder, int litAnimationFrames) {
-			this(blockId, textureFolder, litAnimationFrames, AssetKind.FURNACE_LIKE);
-		}
-
-		private static AssetDefinition anvil(String blockId, String textureFolder) {
-			return new AssetDefinition(blockId, textureFolder, 0, AssetKind.ANVIL);
-		}
-	}
+	private record AssetDefinition(String blockId, String textureFolder, int litAnimationFrames) {}
 }
