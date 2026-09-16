@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_diamond_smoker": {
+      "conditions": {
+        "items": [
+          {
+            "items": "upgradeable-utilities:diamond_smoker"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "upgradeable-utilities:netherite_smoker_upgrade"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_diamond_smoker"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "upgradeable-utilities:netherite_smoker_upgrade"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "upgradeable-utilities:block/ironfurnace/iron_furnace_top",
+    "front": "upgradeable-utilities:block/ironfurnace/iron_furnace_front",
+    "side": "upgradeable-utilities:block/ironfurnace/iron_furnace_side",
+    "top": "upgradeable-utilities:block/ironfurnace/iron_furnace_top"
+  }
+}

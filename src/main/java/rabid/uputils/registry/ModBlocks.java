@@ -10,55 +10,63 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import rabid.uputils.block.*;
 import rabid.uputils.UpgradeableUtilities;
 
 import java.util.function.Function;
+import rabid.uputils.block.copper.*;
+import rabid.uputils.block.iron.*;
+import rabid.uputils.block.gold.*;
+import rabid.uputils.block.diamond.*;
+import rabid.uputils.block.netherite.*;
 
 public final class ModBlocks {
 	private ModBlocks() {}
 
-	public static final Block COPPER_FURNACE = registerWithItem(
-		"copper_furnace",
-		CopperFurnaceBlock::new,
-		BlockBehaviour.Properties.ofFullCopy(Blocks.FURNACE),
-		new Item.Properties()
-	);
+	// Furnaces
+	public static final Block COPPER_FURNACE = registerFurnace("copper_furnace", CopperFurnaceBlock::new);
+	public static final Block IRON_FURNACE = registerFurnace("iron_furnace", IronFurnaceBlock::new);
+	public static final Block GOLD_FURNACE = registerFurnace("gold_furnace", GoldFurnaceBlock::new);
+	public static final Block DIAMOND_FURNACE = registerFurnace("diamond_furnace", DiamondFurnaceBlock::new);
+	public static final Block NETHERITE_FURNACE = registerFurnace("netherite_furnace", NetheriteFurnaceBlock::new);
+	// Blast Furnaces
+	public static final Block COPPER_BLAST_FURNACE = registerBlastFurnace("copper_blast_furnace", CopperBlastFurnaceBlock::new);
+	public static final Block IRON_BLAST_FURNACE = registerBlastFurnace("iron_blast_furnace", IronBlastFurnaceBlock::new);
+	public static final Block GOLD_BLAST_FURNACE = registerBlastFurnace("gold_blast_furnace", GoldBlastFurnaceBlock::new);
+	public static final Block DIAMOND_BLAST_FURNACE = registerBlastFurnace("diamond_blast_furnace", DiamondBlastFurnaceBlock::new);
+	public static final Block NETHERITE_BLAST_FURNACE = registerBlastFurnace("netherite_blast_furnace", NetheriteBlastFurnaceBlock::new);
+	// Smokers
+	public static final Block COPPER_SMOKER = registerSmoker("copper_smoker", CopperSmokerBlock::new);
+	public static final Block IRON_SMOKER = registerSmoker("iron_smoker", IronSmokerBlock::new);
+	public static final Block GOLD_SMOKER = registerSmoker("gold_smoker", GoldSmokerBlock::new);
+	public static final Block DIAMOND_SMOKER = registerSmoker("diamond_smoker", DiamondSmokerBlock::new);
+	public static final Block NETHERITE_SMOKER = registerSmoker("netherite_smoker", NetheriteSmokerBlock::new);
 
-	public static final Block IRON_FURNACE = registerWithItem(
-			"iron_furnace",
-			IronFurnaceBlock::new,
+	private static Block registerFurnace(String id, Function<BlockBehaviour.Properties, Block> blockFactory) {
+		return registerWithItem(
+			id,
+			blockFactory,
 			BlockBehaviour.Properties.ofFullCopy(Blocks.FURNACE),
 			new Item.Properties()
-	);
+		);
+	}
 
-	public static final Block GOLD_FURNACE = registerWithItem(
-			"gold_furnace",
-			GoldFurnaceBlock::new,
-			BlockBehaviour.Properties.ofFullCopy(Blocks.FURNACE),
-			new Item.Properties()
-	);
-
-	public static final Block DIAMOND_FURNACE = registerWithItem(
-			"diamond_furnace",
-			DiamondFurnaceBlock::new,
-			BlockBehaviour.Properties.ofFullCopy(Blocks.FURNACE),
-			new Item.Properties()
-	);
-
-	public static final Block NETHERITE_FURNACE = registerWithItem(
-			"netherite_furnace",
-			NetheriteFurnaceBlock::new,
-			BlockBehaviour.Properties.ofFullCopy(Blocks.FURNACE),
-			new Item.Properties()
-	);
-
-	public static final Block COPPER_BLAST_FURNACE = registerWithItem(
-			"copper_blast_furnace",
-			CopperBlastFurnaceBlock::new,
+	private static Block registerBlastFurnace(String id, Function<BlockBehaviour.Properties, Block> blockFactory) {
+		return registerWithItem(
+			id,
+			blockFactory,
 			BlockBehaviour.Properties.ofFullCopy(Blocks.BLAST_FURNACE),
 			new Item.Properties()
-	);
+		);
+	}
+
+	private static Block registerSmoker(String id, Function<BlockBehaviour.Properties, Block> blockFactory) {
+		return registerWithItem(
+			id,
+			blockFactory,
+			BlockBehaviour.Properties.ofFullCopy(Blocks.SMOKER),
+			new Item.Properties()
+		);
+	}
 
 	public static Block register(String name, Block block) {
 		return Registry.register(BuiltInRegistries.BLOCK, id(name), block);
@@ -91,3 +99,5 @@ public final class ModBlocks {
 		return Identifier.fromNamespaceAndPath(UpgradeableUtilities.MOD_ID, name);
 	}
 }
+
+

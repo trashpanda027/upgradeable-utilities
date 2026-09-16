@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "upgradeable-utilities:copper_furnace",
+    "upgradeable-utilities:iron_furnace",
+    "upgradeable-utilities:gold_furnace",
+    "upgradeable-utilities:diamond_furnace",
+    "upgradeable-utilities:netherite_furnace",
+    "upgradeable-utilities:copper_blast_furnace",
+    "upgradeable-utilities:iron_blast_furnace",
+    "upgradeable-utilities:gold_blast_furnace",
+    "upgradeable-utilities:diamond_blast_furnace",
+    "upgradeable-utilities:netherite_blast_furnace",
+    "upgradeable-utilities:copper_smoker",
+    "upgradeable-utilities:iron_smoker",
+    "upgradeable-utilities:gold_smoker",
+    "upgradeable-utilities:diamond_smoker",
+    "upgradeable-utilities:netherite_smoker"
+  ]
+}

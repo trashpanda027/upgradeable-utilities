@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "upgradeable-utilities:diamond_smoker",
+    "D": "minecraft:netherite_ingot"
+  },
+  "pattern": [
+    " D ",
+    "DCD",
+    " D "
+  ],
+  "result": {
+    "id": "upgradeable-utilities:netherite_smoker"
+  }
+}

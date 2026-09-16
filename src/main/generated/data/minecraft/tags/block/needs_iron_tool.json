@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "upgradeable-utilities:iron_furnace",
+    "upgradeable-utilities:gold_furnace",
+    "upgradeable-utilities:diamond_furnace",
+    "upgradeable-utilities:iron_blast_furnace",
+    "upgradeable-utilities:gold_blast_furnace",
+    "upgradeable-utilities:diamond_blast_furnace",
+    "upgradeable-utilities:iron_smoker",
+    "upgradeable-utilities:gold_smoker",
+    "upgradeable-utilities:diamond_smoker"
+  ]
+}

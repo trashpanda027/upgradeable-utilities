@@ -3,13 +3,13 @@
 	"id": "upgradeable-utilities",
 	"version": "${version}",
 	"name": "Upgradeable Utilities",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A mod that adds upgradeability to different utility blocks!",
 	"authors": [
-		"Me!"
+		"rabidraccoon027"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://discord.gg/dgp9bHMbZ6",
+		"sources": "https://github.com/trashpanda027/upgradeable-utilities"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/upgradeable-utilities/icon.png",
